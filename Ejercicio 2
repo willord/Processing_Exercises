@@ -1,0 +1,46 @@
+int n=500;
+int x=50;
+int y=height-50;
+float[] xT= new float[n];
+float[] xB= new float[n];
+
+size(700,433);
+background(#FFFFCD);
+
+for(int i=0;i<n;i++){ //dibujo de lineas
+xT[i]=random(100,600);
+xB[i]=random(100,600);
+line(xT[i],50,xB[i],383);
+}
+
+fill(#ad7720);
+
+for(int i=0;i<n-492;i++){ //dibujo circulos izquierdos
+ellipse(x,y,50,50);
+y=y-50;
+}
+
+y=height-50;
+for(int i=0;i<n-492;i++){ //dibujo circulos derechos
+ellipse(x+600,y,50,50);
+y=y-50;
+}
+
+noFill();
+for(int i=0;i<n-250;i++){ //Circulos arriba
+  float X=random(100,600);
+  float Y=random(10,40);
+  float Art= random(5,30);
+  stroke(random(255),random(255),random(255));
+  ellipse(X,Y,Art,Art);
+  
+}
+
+for(int i=0;i<n-250;i++){ //Circulos abajo
+  float X=random(100,600);
+  float Y=random(393,423);
+  float Art= random(5,30);
+  stroke(random(255),random(255),random(255));
+  ellipse(X,Y,Art,Art);
+  
+}
